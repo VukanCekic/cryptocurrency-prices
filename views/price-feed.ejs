@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Cryptocurrency Prices</h1>
+        <div class="cards-grid">
+            <% top10.forEach(function(card){ %>
+                <div class="card">
+                <div class="card__headline">
+                    <h2><%= card["rank"] %></h2>
+                    <p>-</p>
+                    <h2><%= card["name"] %></h2>
+                </div>
+                <div class="card__body">
+                    <h3><%= card["price"] %></h3>
+                    <p><%= card["24h"] %></p>
+                    <p><%= card["7d"] %></p>
+                    <p><%= card["marketCap"] %></p>
+                    <p><%= card["volume"] %></p>
+                    <p><%= card["cirulatingSupply"] %></p>
+        
+        
+                </div>
+                </div>
+                <% }); %>
+        </div>
+    </div>
+</body>
+</html>
+
+
