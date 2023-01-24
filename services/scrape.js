@@ -37,9 +37,6 @@ function scrapeData(data, numberToScrape) {
         .each((childIndex, childElm) => {
           let value = $(childElm).text();
 
-          console.log(value)
-          console.log(keyIndex)
-
           if (keyIndex === 1 || keyIndex === 6) {
             value = $("p:first-child", $(childElm).html()).text();
           }
