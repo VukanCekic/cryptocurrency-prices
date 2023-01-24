@@ -18,6 +18,10 @@ app.get("", async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT || config.PORT, () => {
-  console.log(`started on port ${process.env.PORT || config.PORT}`);
-});
+try {
+  app.listen(process.env.PORT || config.PORT, () => {
+    console.log(`started on port ${process.env.PORT || config.PORT}`);
+  });
+} catch (e) {
+  console.log(e);
+}
